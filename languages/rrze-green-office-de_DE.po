@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: RRZE Green Office\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-11 06:56+0000\n"
-"PO-Revision-Date: 2024-10-16 13:15+0000\n"
-"Last-Translator: RRZE Webteam <webmaster@fau.de>\n"
+"PO-Revision-Date: 2024-10-17 14:15+0000\n"
+"Last-Translator: Barbara Bothe\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -15,47 +15,61 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 "X-Domain: rrze-green-office"
 
-#: includes/Main.php:108
+#: includes/Settings.php:113
+#, php-format
+msgid "%s to %s"
+msgstr "%s bis %s"
+
+#: includes/Main.php:110
 msgid "Assumptions:"
 msgstr "Annahmen:"
 
-#: includes/Main.php:88
+#: includes/Main.php:90
 msgid "Bicycle"
 msgstr "Fahrrad"
 
-#: includes/Shortcode.php:57
+#: includes/Shortcode.php:49
 msgid "Bicycle / E-bike / E-scooter / Pedelec"
 msgstr "Fahrrad / E-Rad / E-Roller / Pedelec"
 
-#: includes/Main.php:98
+#: includes/Config.php:152
+msgid "Bike"
+msgstr "Fahrrad"
+
+#: includes/Main.php:100
 msgid "Brief Analysis:"
 msgstr "Kurzanalyse:"
 
-#: includes/Shortcode.php:69
+#: includes/Shortcode.php:65
 msgid "Calculate"
 msgstr "Berechnen"
 
-#: includes/Shortcode.php:59 includes/Main.php:90 includes/Main.php:91
+#: includes/Shortcode.php:51 includes/Main.php:92 includes/Main.php:93
+#: includes/Config.php:154
 msgid "Car"
 msgstr "Auto"
 
-#: includes/Shortcode.php:55
+#: includes/Shortcode.php:47
 msgid "Choose mode of transport"
 msgstr "Verkehrsmittel wählen"
 
-#: includes/Main.php:96
+#: includes/Settings.php:71
+msgid "CO2 Emission Rates"
+msgstr "CO₂-Ausstoß-Werte"
+
+#: includes/Main.php:98
 msgid "could save you"
 msgstr "könnte Ihnen einsparen"
 
-#: includes/Main.php:92
+#: includes/Main.php:94
 msgid "CO₂ Emission"
 msgstr "CO₂-Ausstoß"
 
-#: includes/Main.php:115
+#: includes/Main.php:117
 msgid "CO₂ equivalents [kg/year]"
 msgstr "CO₂-Äquivalente [kg/Jahr]"
 
-#: includes/Shortcode.php:45
+#: includes/Shortcode.php:32
 msgid ""
 "Determine your current CO₂ emissions, discover savings through alternative "
 "means of transport, and see how you compare to others."
@@ -64,7 +78,7 @@ msgstr ""
 "Einsparmöglichkeiten durch alternative Verkehrsmittel und sehen Sie, wie Sie "
 "im Vergleich zu anderen abschneiden."
 
-#: includes/Main.php:116
+#: includes/Main.php:118
 msgid ""
 "Due to lecture-free time or holidays and public holidays, we calculate an "
 "average of 43.5 weeks per year in which you travel to FAU."
@@ -72,19 +86,27 @@ msgstr ""
 "Aufgrund vorlesungsfreier Zeit bzw. Urlaubs- und Feiertage rechnen wir im "
 "Durchschnitt mit 43,5 Wochen pro Jahr, in denen zur FAU gefahren wird."
 
-#: includes/Shortcode.php:48
+#: includes/Shortcode.php:36
 msgid "e.g., 4.5"
 msgstr "z.B. 4,5"
 
-#: includes/Shortcode.php:51
+#: includes/Shortcode.php:41
 msgid "e.g., 5"
 msgstr "z.B. 5"
 
-#: includes/Shortcode.php:66
+#: includes/Shortcode.php:60
 msgid "Employee"
 msgstr "Mitarbeiter/in"
 
-#: includes/Main.php:101
+#: includes/Config.php:150
+msgid "Employees"
+msgstr "Mitarbeiter/innen"
+
+#: includes/Settings.php:85
+msgid "Follow the white rabbit."
+msgstr "Follow the white rabbit."
+
+#: includes/Main.php:103
 #| msgid "has the lowest CO₂ emission with"
 msgid "has the lowest CO₂ emissions with"
 msgstr "hat den geringsten CO₂-Ausstoß mit"
@@ -97,47 +119,55 @@ msgstr "https://blogs.fau.de/webworking/"
 msgid "https://github.com/RRZE-Webteam/rrze-green-office/"
 msgstr "https://github.com/RRZE-Webteam/rrze-green-office/"
 
-#: includes/Shortcode.php:62
+#: includes/Shortcode.php:56
 msgid "I am:"
-msgstr "I am:"
+msgstr "Ich bin:"
 
-#: includes/Main.php:100
+#: includes/Main.php:102
 msgid "in their distance category."
 msgstr "in Ihrer Entfernungskategorie."
 
-#: includes/Main.php:107
+#: includes/Main.php:109
 msgid "is the most used mode of transport."
 msgstr "ist das meistgenutzte Verkehrsmittel."
 
-#: includes/Main.php:104
+#: includes/Main.php:106
 msgid "kg CO₂ per year could be saved."
 msgstr "kg CO₂ pro Jahr könnten eingespart werden."
 
-#: includes/Main.php:103
+#: includes/Main.php:105
 msgid "kg CO₂ per year."
 msgstr "kg CO₂ pro Jahr."
 
-#: includes/Main.php:102
+#: includes/Main.php:104
 msgid "kg per year."
 msgstr "kg pro Jahr."
 
-#: includes/Main.php:110
+#: includes/Main.php:112
 msgid "Modal Split of the selected distance"
 msgstr "Modal Split der ausgewählten Entfernung"
 
-#: includes/Shortcode.php:53
+#: includes/Shortcode.php:45
 msgid "Mode of transport:"
 msgstr "Verkehrsmittel:"
 
-#: includes/Shortcode.php:47
+#: includes/Shortcode.php:35
 msgid "My route to FAU in km:"
 msgstr "Meine Wegstrecke zur FAU in km:"
 
-#: includes/Shortcode.php:56 includes/Main.php:87
+#: includes/Config.php:151
+msgid "On Foot"
+msgstr "Zu Fuß"
+
+#: includes/Shortcode.php:48 includes/Main.php:89
 msgid "On foot"
 msgstr "Zu Fuß"
 
-#: includes/Main.php:106
+#: includes/Config.php:155
+msgid "Other"
+msgstr "Andere"
+
+#: includes/Main.php:108
 msgid "Please enter valid values ​​for distance and frequency."
 msgstr "Bitte geben Sie gültige Werte für Distanz und Häufigkeit ein."
 
@@ -151,7 +181,7 @@ msgstr "Plugins: %1$s: %2$s"
 msgid "Provides a CO2 calculator."
 msgstr "CO2-Rechner als Shortcode oder Block auf die Website einbinden."
 
-#: includes/Shortcode.php:58 includes/Main.php:89
+#: includes/Shortcode.php:50 includes/Main.php:91 includes/Config.php:153
 msgid "Public Transport"
 msgstr "ÖPNV"
 
@@ -164,17 +194,21 @@ msgstr "RRZE Green Office"
 msgid "RRZE Webteam"
 msgstr "RRZE-Webteam"
 
-#: includes/Shortcode.php:64
+#: includes/Shortcode.php:58
 msgid "Select"
 msgstr "Auswählen"
 
-#: includes/Main.php:94 includes/Main.php:111
+#: includes/Main.php:96 includes/Main.php:113
 msgid "Share [%]"
 msgstr "Anteil [%]"
 
-#: includes/Shortcode.php:65
+#: includes/Shortcode.php:59
 msgid "Student"
 msgstr "Student/in"
+
+#: includes/Config.php:149
+msgid "Students"
+msgstr "Studierende"
 
 #. 1: Server PHP version number, 2: Required PHP version number.
 #: rrze-green-office.php:78
@@ -196,34 +230,47 @@ msgstr ""
 "Auf dem Server läuft WordPress Version %1$s. Das Plugin erfordert mindestens "
 "WordPress Version %2$s."
 
-#: includes/Shortcode.php:50
+#: includes/Config.php:156
+msgid "Total"
+msgstr "Gesamt"
+
+#: includes/Settings.php:64
+msgid "Total People"
+msgstr "Gesamtzahlen"
+
+#. Use $args' label_for to populate the id inside the callback.
+#: includes/Settings.php:48 includes/Settings.php:57
+msgid "Transport Data"
+msgstr "Transportmittel-Daten"
+
+#: includes/Shortcode.php:40
 msgid "Trips per week:"
 msgstr "Fahrten pro Woche:"
 
-#: includes/Main.php:93 includes/Main.php:109
+#: includes/Main.php:95 includes/Main.php:111
 msgid "Usage (%)"
 msgstr "Nutzung (%)"
 
-#: includes/Main.php:99
+#: includes/Main.php:101
 msgid "uses"
-msgstr "nutzt"
+msgstr "nutzen"
 
-#: includes/Main.php:105
+#: includes/Main.php:107
 msgid "would cause you to emit kg CO₂ more per year."
 msgstr "würde dazu führen, dass Sie kg CO₂ mehr pro Jahr ausstoßen."
 
-#: includes/Main.php:95
+#: includes/Main.php:97
 msgid "Your annual CO₂ emission is:"
 msgstr "Ihr jährlicher CO₂-Ausstoß beträgt:"
 
-#: includes/Main.php:97
+#: includes/Main.php:99
 msgid "Your annual CO₂ emissions are:"
 msgstr "Ihr jährlicher CO₂-Ausstoß beträgt:"
 
-#: includes/Main.php:114
+#: includes/Main.php:116
 msgid "Your CO₂ emission"
 msgstr "Ihr CO₂-Ausstoß"
 
-#: includes/Main.php:112 includes/Main.php:113
+#: includes/Main.php:114 includes/Main.php:115
 msgid "Your current CO₂ emission"
 msgstr "Ihr aktueller CO₂-Ausstoß"

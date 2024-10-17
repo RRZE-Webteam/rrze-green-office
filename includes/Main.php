@@ -43,12 +43,14 @@ class Main
 
         add_action('init', [$this, 'registerAssets']);
         add_action('enqueue_block_assets', [$this, 'enqueueAssets']);
+        add_action('admin_enqueue_scripts', [$this, 'adminEnqueueAssets']);
 
         // Initialize Shortcode and BlockEditor
         $config = new Config($this->pluginFile);
         $default_attributes = $config::getDefaultAttributes();
         $shortcode = new Shortcode($default_attributes);
         $blockeditor = new BlockEditor($default_attributes);
+        $settings = new Settings();
     }
 
     /**
@@ -116,7 +118,12 @@ class Main
             'average_weeks' => __('Due to lecture-free time or holidays and public holidays, we calculate an average of 43.5 weeks per year in which you travel to FAU.', 'rrze-green-office')
         );
 
-        wp_localize_script('mobility-study-chart', 'chartTranslations', $chart_translations);
+        wp_localize_script('green-office-chart-custom', 'chartTranslations', $chart_translations);
+
+        $settings = Settings::getOption('rrze-green-office');
+        wp_localize_script('green-office-chart-custom', 'chartData', $settings['transport-data']);
+        wp_localize_script('green-office-chart-custom', 'chartPeople', $settings['people-count']);
+        wp_localize_script('green-office-chart-custom', 'chartRates', $settings['co2-emission-rates']);
 
         wp_register_style(
             'green-office-frontend-style',
@@ -149,5 +156,14 @@ class Main
         // Enqueue registered assets for block editor and frontend
         wp_enqueue_script('green-office-random-bark');
         wp_enqueue_style('green-office-frontend-style');
+    }
+
+    public function adminEnqueueAssets() {
+        wp_enqueue_style(
+            'rrze-green-office-admin-style',
+            plugins_url('build/admin.css', plugin_basename($this->pluginFile)),
+            [],
+            filemtime(plugin_dir_path($this->pluginFile) . 'build/admin.css') ?: $this->pluginVersion
+        );
     }
 }

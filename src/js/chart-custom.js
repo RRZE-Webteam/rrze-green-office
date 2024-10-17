@@ -206,7 +206,7 @@ function updateChart() {
     }
 
     emissionData.forEach(d => {
-        console.log(d.label);
+        //console.log(d.label);
         if (d.label !== translateTransport(currentTransport)) {
             const diff = userEmission - d.emission;
             if (diff > 0) {

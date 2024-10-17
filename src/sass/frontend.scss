@@ -1,32 +1,25 @@
 .rrze-green-office {
-    &.shortcode {
-        border-style: solid;
-    }
-    &.block {
-        border-style: dotted;
-    }
-    .wouf-ucfirst {
-        text-transform: lowercase;
-    }
-    
-    .wouf-ucfirst::first-letter {
-        text-transform: uppercase;
-    }
-    
-    .wouf-uppercase {
-        text-transform: uppercase;
-    }
-
-    .wouf-lowercase {
-        text-transform: uppercase;
-    }
-    .wouf-small {
-        font-size: 0.8rem;
-    }
-    .wouf-large {
-        font-size: 1.5rem;
-    }
-    .wouf-xlarge {
-        font-size: 2rem;
+    &.co2-emissions-calculator {
+        .input-container {
+            border: 1px solid var(--color-ContentBorders, #dfe6ec);
+            width: 100%;
+            padding: var(--width-gutter, 30px);
+            margin-top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: var(--width-gutter, 30px);
+            row-gap: var(--width-gutter-half, 15px);
+            align-items: end;
+            input {
+                height: 40px;
+                padding-top: 9px;
+                padding-bottom: 8px;
+                margin: 0;
+            }
+            select,
+            button {
+                margin: 0;
+            }
+        }
     }
 }
