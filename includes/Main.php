@@ -85,6 +85,7 @@ class Main
             true
         );
 
+        $options = Settings::getOption('rrze-green-office');
         $chart_translations = array(
             'on_foot' => __('On foot', 'rrze-green-office'),
             'bicycle' => __('Bicycle', 'rrze-green-office'),
@@ -115,7 +116,7 @@ class Main
             'current_co2_emission' => __('Your current CO₂ emission', 'rrze-green-office'),
             'your_co2_emission' => __('Your CO₂ emission', 'rrze-green-office'),
             'co2_equivalents' => __('CO₂ equivalents [kg/year]', 'rrze-green-office'),
-            'average_weeks' => __('Due to lecture-free time or holidays and public holidays, we calculate an average of 43.5 weeks per year in which you travel to FAU.', 'rrze-green-office')
+            'average_weeks' => sprintf(__('Due to lecture-free time or holidays and public holidays, we calculate an average of %s weeks per year in which you travel to FAU.', 'rrze-green-office'), $options['weeks-per-year']),
         );
 
         wp_localize_script('green-office-chart-custom', 'chartTranslations', $chart_translations);
@@ -124,6 +125,7 @@ class Main
         wp_localize_script('green-office-chart-custom', 'chartData', $settings['transport-data']);
         wp_localize_script('green-office-chart-custom', 'chartPeople', $settings['people-count']);
         wp_localize_script('green-office-chart-custom', 'chartRates', $settings['co2-emission-rates']);
+        wp_localize_script('green-office-chart-custom', 'weeksPerYear', [$settings['weeks-per-year']]);
 
         wp_register_style(
             'green-office-frontend-style',

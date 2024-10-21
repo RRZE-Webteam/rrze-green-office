@@ -10,6 +10,7 @@
             column-gap: var(--width-gutter, 30px);
             row-gap: var(--width-gutter-half, 15px);
             align-items: end;
+            margin-bottom: 1em;
             input {
                 height: 40px;
                 padding-top: 9px;
@@ -19,6 +20,14 @@
             select,
             button {
                 margin: 0;
+            }
+        }
+        .chart-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .chart-item {
+                flex: 50% 1 0;
             }
         }
     }

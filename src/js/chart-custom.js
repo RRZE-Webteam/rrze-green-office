@@ -1,46 +1,9 @@
-const data = [
-    {
-        distance: 'bis unter 2,5 km',
-        students: { foot: 0.308, bike: 0.548, opnv: 0.137, miv: 0.006, other: 0.001, total: 586 },
-        employees: { foot: 0.278, bike: 0.666, opnv: 0.044, miv: 0.007, other: 0.004, total: 250 }
-    },
-    {
-        distance: '2,5 bis unter 5 km',
-        students: { foot: 0.027, bike: 0.555, opnv: 0.383, miv: 0.032, other: 0.003, total: 623 },
-        employees: { foot: 0.025, bike: 0.773, opnv: 0.128, miv: 0.07, other: 0.003, total: 302 }
-    },
-    {
-        distance: '5 bis unter 10 km',
-        students: { foot: 0.013, bike: 0.427, opnv: 0.488, miv: 0.069, other: 0.002, total: 366 },
-        employees: { foot: 0.002, bike: 0.648, opnv: 0.163, miv: 0.187, other: 0, total: 290 }
-    },
-    {
-        distance: '10 bis unter 25 km',
-        students: { foot: 0, bike: 0.052, opnv: 0.764, miv: 0.184, other: 0, total: 777 },
-        employees: { foot: 0.003, bike: 0.144, opnv: 0.349, miv: 0.502, other: 0.002, total: 529 }
-    },
-    {
-        distance: '25 bis unter 50 km',
-        students: { foot: 0, bike: 0.002, opnv: 0.71, miv: 0.288, other: 0, total: 525 },
-        employees: { foot: 0, bike: 0.019, opnv: 0.391, miv: 0.59, other: 0, total: 287 }
-    },
-    {
-        distance: '50 km und mehr',
-        students: { foot: 0, bike: 0, opnv: 0.799, miv: 0.201, other: 0, total: 244 },
-        employees: { foot: 0, bike: 0, opnv: 0.576, miv: 0.424, other: 0, total: 135 }
-    },
-];
+const data = chartData;
 
-const students = 3121;
-const employees = 1793;
+//const students = 3121;
+//const employees = 1793;
 
-const co2EmissionRates = {
-    foot: 0,
-    bike: 9,
-    opnv: 60,
-    miv: 169,
-    other: 0
-};
+//console.log(parseFloat(weeksPerYear[0]));
 
 const distancesInKm = [2.5, 5, 10, 25, 50, Infinity];
 
@@ -73,10 +36,10 @@ function calculateUserEmission() {
         return null;
     }
 
-    const emissionRate = co2EmissionRates[transport];
+    const emissionRate = chartRates[transport];
     const totalDistance = distance * 2; // Hin- und Rückweg
     const weeklyEmission = totalDistance * emissionRate * frequency;
-    const yearlyEmission = weeklyEmission * 43.5; // 43.5 Wochen pro Jahr
+    const yearlyEmission = weeklyEmission * parseFloat(weeksPerYear[0]); // 43.5 Wochen pro Jahr
     return yearlyEmission / 1000; // Umrechnung in kg
 }
 
@@ -94,10 +57,6 @@ function getTransportPhrase(transport) {
 
     };
 
-
-
-
-
     return transportPhrases[transport];
 }
 
@@ -110,19 +69,19 @@ function updateChart() {
     const userType = document.getElementById('userType').value;
     const distance = parseFloat(document.getElementById('distance').value);
     const frequency = parseInt(document.getElementById('frequency').value);
-    const totalDistance = distance * 2 * frequency * 43.5; // Hin- und Rückweg, Frequenz pro Woche, 43.5 Wochen
+    const totalDistance = distance * 2 * frequency * parseFloat(weeksPerYear[0]); // Hin- und Rückweg, Frequenz pro Woche, 43.5 Wochen
 
     const emissionData = [
-        { label: chartTranslations.foot || 'Zu Fuß', emission: (totalDistance * co2EmissionRates.foot) / 1000 },
-        { label: chartTranslations.bicycle || 'Fahrrad', emission: (totalDistance * co2EmissionRates.bike) / 1000 },
-        { label: chartTranslations.public_transport || 'ÖPNV', emission: (totalDistance * co2EmissionRates.opnv) / 1000 },
-        { label: chartTranslations.car || 'Auto', emission: (totalDistance * co2EmissionRates.miv) / 1000 }
+        { label: chartTranslations.foot || 'Zu Fuß', emission: (totalDistance * chartRates.foot) / 1000 },
+        { label: chartTranslations.bicycle || 'Fahrrad', emission: (totalDistance * chartRates.bike) / 1000 },
+        { label: chartTranslations.public_transport || 'ÖPNV', emission: (totalDistance * chartRates.opnv) / 1000 },
+        { label: chartTranslations.car || 'Auto', emission: (totalDistance * chartRates.miv) / 1000 }
     ];
 
 
     // Erstelle die Daten für die Balken
     const barData = {
-        label: 'CO₂-Ausstoß',
+        label: chartTranslations.co2_emission,
         data: emissionData.map(d => d.label === translateTransport(currentTransport) ? userEmission : d.emission),
         backgroundColor: emissionData.map(d => {
             if (d.label === translateTransport(currentTransport)) {
@@ -157,10 +116,10 @@ function updateChart() {
     co2Chart.update();
 
     // Nutzungsdaten berechnen
-    let userDataset = data[0];
-    for (let i = 0; i < data.length; i++) {
+    let userDataset = chartData[0];
+    for (let i = 0; i < chartData.length; i++) {
         if (distance <= distancesInKm[i]) {
-            userDataset = data[i];
+            userDataset = chartData[i];
             break;
         }
     }

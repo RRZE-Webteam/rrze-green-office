@@ -73,6 +73,13 @@ class Settings {
             'rrze-green-office',
             'transport-data',
         );
+        add_settings_field(
+            'weeks-per-year',
+            __('Working Weeks per Year', 'rrze-green-office'),
+            [$this, 'weeksPerYear'],
+            'rrze-green-office',
+            'transport-data',
+        );
     }
 
     /**
@@ -107,16 +114,16 @@ class Settings {
                 }
                 echo '</tr>';
             }
-            foreach ($transportData as $distance => $categories) {
-                $distanceParts = explode('-', $distance);
+            foreach ($transportData as $i => $categories) {
                 echo '<tr>';
-                echo '<th scope="row">' . sprintf(esc_html__('%s to %s', 'rrze-green-office'), $distanceParts[0], $distanceParts[1] . ' km') . '</th>';
+                echo '<th scope="row">' . $this->labels['transport-data'][$i] . '</th>';
                 foreach ($categories as $cat => $data) {
-                    if ($cat != $category) continue;
+                    if ($cat == $category)
+                        continue;
                     foreach ($data as $transportMode => $value) {
                         echo '<td>'
-                            . '<label class="sr-only screen-reader-text">' . $this->labels[$category] . ' ' . $this->labels[$transportMode]. '</label>'
-                            . '<input name="rrze-green-office[transport-data][' . $distance . '][' . $cat . '][' . $transportMode . ']" type="number" step="0.001" value="' . $value . '">'
+                            . '<label class="sr-only screen-reader-text">' . $this->labels[$category] . ' ' . $this->labels[$transportMode] . '</label>'
+                            . '<input name="rrze-green-office[transport-data][' . $i . '][' . $cat . '][' . $transportMode . ']" type="number" step="0.001" value="' . $value . '">'
                             . '</td>';
                     }
                 }
@@ -149,6 +156,17 @@ class Settings {
                 . '<input type="number" step="1" min="0" name="rrze-green-office[co2-emission-rates][' . $cat .  ']" id="rrze-green-office_co2-emission-rates_' . $cat .  '" value="' . $value . '">'
                 . '</p>';
         }
+    }
+
+    public function weeksPerYear($args) {
+        $weeksPerYear = $this->options['weeks-per-year'] ?? false;
+        if (!$weeksPerYear) return;
+
+        echo '<p><label for="rrze-green-office_weeks-per-year" >'
+            . esc_html__('Working Weeks per Year', 'rrze-green-office')
+            . '</label>'
+            . '<input type="number" step="0.1" min="0" name="rrze-green-office[weeks-per-year]" id="rrze-green-office_weeks-per-year" value="' . $weeksPerYear . '">'
+            . '</p>';
     }
 
     /**

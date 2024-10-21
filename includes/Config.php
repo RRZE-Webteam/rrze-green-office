@@ -20,7 +20,7 @@ class Config
     public static function getDefaultSettings() {
         return [
             'transport-data' => [
-                '-2.5' => [
+                [
                     'students' => [
                         'foot' => 0.308,
                         'bike' => 0.548,
@@ -38,7 +38,7 @@ class Config
                         'total' => 250,
                     ],
                 ],
-                '2.5-5' => [
+                [
                     'students' => [
                         'foot' => 0.027,
                         'bike' => 0.555,
@@ -56,7 +56,7 @@ class Config
                         'total' => 302,
                     ],
                 ],
-                '5-10' => [
+                [
                     'students' => [
                         'foot' => 0.013,
                         'bike' => 0.427,
@@ -74,7 +74,7 @@ class Config
                         'total' => 290,
                     ],
                 ],
-                '10-25' => [
+                [
                     'students' => [
                         'foot' => 0,
                         'bike' => 0.052,
@@ -92,7 +92,7 @@ class Config
                         'total' => 529,
                     ],
                 ],
-                '25-50' => [
+                [
                     'students' => [
                         'foot' => 0,
                         'bike' => 0.002,
@@ -110,7 +110,7 @@ class Config
                         'total' => 287,
                     ],
                 ],
-                '50-' => [
+                [
                     'students' => [
                         'foot' => 0,
                         'bike' => 0,
@@ -140,7 +140,8 @@ class Config
                 'opnv' => 60,
                 'miv' => 169,
                 'other' => 0,
-            ]
+            ],
+            'weeks-per-year' => 43.5,
         ];
     }
 
@@ -154,6 +155,14 @@ class Config
             'miv' => __('Car', 'rrze-green-office'),
             'other' => __('Other', 'rrze-green-office'),
             'total' => __('Total', 'rrze-green-office'),
+            'transport-data' => [
+                __('< 2.5km','rrze-green-office'),
+                __('2.5 - 5km','rrze-green-office'),
+                __('5 - 10km','rrze-green-office'),
+                __('10 - 25km','rrze-green-office'),
+                __('25 - 50km','rrze-green-office'),
+                __('> 50km','rrze-green-office'),
+            ],
         ];
     }
 }
