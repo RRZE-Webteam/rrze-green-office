@@ -29,7 +29,7 @@ function formatNumber(number) {
 function calculateUserEmission() {
     const distance = parseFloat(document.getElementById('distance').value);
     const frequency = parseInt(document.getElementById('frequency').value);
-    const transport = document.getElementById('transport').value;
+    const transport = parseAlphanumeric(document.getElementById('transport').value);
 
     if (isNaN(distance) || isNaN(frequency)) {
         alert(chartTranslations.valid_distance);
@@ -60,13 +60,17 @@ function getTransportPhrase(transport) {
     return transportPhrases[transport];
 }
 
+function parseAlphanumeric(string) {
+    return string.replace(/\W+/g,"");
+}
+
 
 function updateChart() {
     const userEmission = calculateUserEmission();
     if (userEmission === null) return;
 
-    const currentTransport = document.getElementById('transport').value;
-    const userType = document.getElementById('userType').value;
+    const currentTransport = parseAlphanumeric(document.getElementById('transport').value);
+    const userType = parseAlphanumeric(document.getElementById('userType').value);
     const distance = parseFloat(document.getElementById('distance').value);
     const frequency = parseInt(document.getElementById('frequency').value);
     const totalDistance = distance * 2 * frequency * parseFloat(weeksPerYear[0]); // Hin- und Rückweg, Frequenz pro Woche, 43.5 Wochen

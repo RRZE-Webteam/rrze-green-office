@@ -1,6 +1,6 @@
 {
   "name": "rrze-green-office",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "main": "build/index.js",
   "scripts": {
     "build-css": "node-sass --output-style compressed src/sass/ -o build/",
@@ -11,7 +11,7 @@
     "precommit": "npm run increment-version"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^24.0.0",
+    "@wordpress/scripts": "^30.3.0",
     "node-sass": "^8.0.0"
   }
 }

@@ -101,9 +101,9 @@ function activate()
         wp_die(
             sprintf(
                 /* translators: 1: The plugin name, 2: The error string. */
-                __('Plugins: %1$s: %2$s', 'rrze-green-office'),
-                plugin_basename(__FILE__),
-                $error
+                esc_html__('Plugins: %1$s: %2$s', 'rrze-green-office'),
+                esc_html(plugin_basename(__FILE__)),
+                esc_html($error)
             )
         );
     }
@@ -134,8 +134,8 @@ function onLoaded()
                             /* translators: 1: The plugin name, 2: The error string. */
                             esc_html__('Plugins: %1$s: %2$s', 'rrze-green-office') .
                             '</p></div>',
-                        $pluginName,
-                        $error
+                        esc_html($pluginName),
+                        esc_html($error)
                     );
                 });
             }

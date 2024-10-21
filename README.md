@@ -5,7 +5,7 @@ Tags: green office, shortcode, block, fun
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 8.2
-Stable tag: 1.2.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Author: RRZE Webteam
@@ -19,25 +19,14 @@ Domain Path: /languages
 [![GitHub issues](https://img.shields.io/github/issues/RRZE-Webteam/rrze-green-office)](https://github.com/RRZE-Webteam/rrze-green-office/issues)
 ![GitHub milestone details](https://img.shields.io/github/milestones/progress-percent/RRZE-Webteam/rrze-green-office/3)
 
-A plugin that brings Green Office to WordPress – with a shortcode and block.
-
-This README.md file serves as a template: [GitHub Issue #8](https://github.com/RRZE-Webteam/rrze-green-office/issues/8)
+Plugin for the Green Office of the FAU to calculate CO2 output
 
 # RRZE Green Office
 
 This plugin is inspired by the famous "Hello Dolly" plugin and brings the dog Lenny to your WordPress site. It supports both a shortcode and a Gutenberg block.
 
-## Using as a Block
-
-Select the "Green Office" block to add Lenny to your post or page.
-
 ## Using as a Shortcode
 
-You can use the shortcode `[rrze-green-office]` to add Lenny anywhere in your content.
-
-### Example
-
-```html
-[green-office]
+You can use the shortcode `[co2_emissions_calculator]` to add an CO2 Emissions Calculator anywhere in your content.
 
 

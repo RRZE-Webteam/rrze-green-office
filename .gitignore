@@ -11,6 +11,5 @@ node_modules/
 ### Composer ###
 composer.lock
 ### WordPress ###
-*.pot
 *.po~
 *.pot~

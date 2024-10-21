@@ -4,10 +4,6 @@ namespace RRZE\GreenOffice;
 
 defined('ABSPATH') || exit;
 
-use RRZE\GreenOffice\Config;
-use RRZE\GreenOffice\Shortcode;
-use RRZE\GreenOffice\BlockEditor;
-
 /**
  * Main class
  */
@@ -116,7 +112,8 @@ class Main
             'current_co2_emission' => __('Your current CO₂ emission', 'rrze-green-office'),
             'your_co2_emission' => __('Your CO₂ emission', 'rrze-green-office'),
             'co2_equivalents' => __('CO₂ equivalents [kg/year]', 'rrze-green-office'),
-            'average_weeks' => sprintf(__('Due to lecture-free time or holidays and public holidays, we calculate an average of %s weeks per year in which you travel to FAU.', 'rrze-green-office'), $options['weeks-per-year']),
+            /* translators: Number of weeks*/
+            'average_weeks' => sprintf(__('Due to lecture-free time or holidays and public holidays, we calculate an average of %f weeks per year in which you travel to FAU.', 'rrze-green-office'), $options['weeks-per-year']),
         );
 
         wp_localize_script('green-office-chart-custom', 'chartTranslations', $chart_translations);
@@ -134,7 +131,7 @@ class Main
             filemtime(plugin_dir_path($this->pluginFile) . 'build/frontend.css') ?: $this->pluginVersion
         );
 
-        wp_register_script(
+        /*wp_register_script(
             'green-office-block-editor-script',
             plugins_url('build/block.js', plugin_basename($this->pluginFile)),
             ['wp-blocks', 'wp-element', 'wp-editor'],
@@ -147,7 +144,7 @@ class Main
             plugins_url('build/editor.css', plugin_basename($this->pluginFile)),
             [],
             filemtime(plugin_dir_path($this->pluginFile) . 'build/editor.css') ?: $this->pluginVersion
-        );
+        );*/
     }
 
     /**
@@ -156,7 +153,6 @@ class Main
     public function enqueueAssets()
     {
         // Enqueue registered assets for block editor and frontend
-        wp_enqueue_script('green-office-random-bark');
         wp_enqueue_style('green-office-frontend-style');
     }
 

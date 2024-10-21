@@ -98,51 +98,56 @@ class Settings {
         $transportData = $this->options['transport-data'] ?? false;
         if (!$transportData) return;
 
+        $output = '';
         foreach (['students', 'employees'] as $category) {
-            echo '<p style="font-weight:bold;">' . $this->labels[$category] . '</p>';
-            echo '<table class="wp-list-table widefat fixed striped table-view-list">';
+            $output .= '<p style="font-weight:bold;">' . $this->labels[$category] . '</p>';
+            $output .= '<table class="wp-list-table widefat fixed striped table-view-list">';
             foreach ($transportData as $categories) {
-                echo '<tr><th></th>';
+                $output .= '<tr><th></th>';
                 foreach ($categories as $cat => $data) {
                     if ($cat != $category) {
                         continue;
                     }
                     foreach ($data as $transportMode => $value) {
-                        echo '<th scope="col">' . $this->labels[$transportMode] . '</th>';
+                        $output .= '<th scope="col">' . $this->labels[$transportMode] . '</th>';
                     }
                     break 2;
                 }
-                echo '</tr>';
+                $output .= '</tr>';
             }
             foreach ($transportData as $i => $categories) {
-                echo '<tr>';
-                echo '<th scope="row">' . $this->labels['transport-data'][$i] . '</th>';
+                $output .= '<tr>';
+                $output .= '<th scope="row">' . $this->labels['transport-data'][$i] . '</th>';
                 foreach ($categories as $cat => $data) {
                     if ($cat == $category)
                         continue;
                     foreach ($data as $transportMode => $value) {
-                        echo '<td>'
+                        $output .= '<td>'
                             . '<label class="sr-only screen-reader-text">' . $this->labels[$category] . ' ' . $this->labels[$transportMode] . '</label>'
                             . '<input name="rrze-green-office[transport-data][' . $i . '][' . $cat . '][' . $transportMode . ']" type="number" step="0.001" value="' . $value . '">'
                             . '</td>';
                     }
                 }
-                echo '</tr>';
+                $output .= '</tr>';
             }
-            echo '</table>';
+            $output .= '</table>';
         }
+
+        echo wp_kses_post($output);
     }
 
     public function renderFieldPeopleCount($args) {
         $peopleCount = $this->options['people-count'] ?? false;
         if (!$peopleCount) return;
+        $output = '';
         foreach ($peopleCount as $cat => $value) {
-            echo '<p><label for="rrze-green-office_people-count_' . $cat .  '">'
+            $output .= '<p><label for="rrze-green-office_people-count_' . $cat .  '">'
                 . $this->labels[$cat]
                 . '</label>'
                 . '<input type="number" step="1" min="0" name="rrze-green-office[people-count][' . $cat .  ']" id="rrze-green-office_people-count_' . $cat .  '" value="' . $value . '">'
                 . '</p>';
         }
+        echo wp_kses_post($output);
     }
 
     public function co2EmissionRates($args) {
@@ -150,23 +155,24 @@ class Settings {
         if (!$co2EmissionRates) return;
 
         foreach ($co2EmissionRates as $cat => $value) {
-            echo '<p><label for="rrze-green-office_co2-emission-rates_' . $cat .  '" >'
+            $output .= '<p><label for="rrze-green-office_co2-emission-rates_' . $cat .  '" >'
                 . $this->labels[$cat]
                 . '</label>'
                 . '<input type="number" step="1" min="0" name="rrze-green-office[co2-emission-rates][' . $cat .  ']" id="rrze-green-office_co2-emission-rates_' . $cat .  '" value="' . $value . '">'
                 . '</p>';
         }
+        echo wp_kses_post($output);
     }
 
     public function weeksPerYear($args) {
         $weeksPerYear = $this->options['weeks-per-year'] ?? false;
         if (!$weeksPerYear) return;
 
-        echo '<p><label for="rrze-green-office_weeks-per-year" >'
+        echo wp_kses_post('<p><label for="rrze-green-office_weeks-per-year" >'
             . esc_html__('Working Weeks per Year', 'rrze-green-office')
             . '</label>'
             . '<input type="number" step="0.1" min="0" name="rrze-green-office[weeks-per-year]" id="rrze-green-office_weeks-per-year" value="' . $weeksPerYear . '">'
-            . '</p>';
+            . '</p>');
     }
 
     /**
