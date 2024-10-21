@@ -19,11 +19,9 @@ Domain Path: /languages
 [![GitHub issues](https://img.shields.io/github/issues/RRZE-Webteam/rrze-green-office)](https://github.com/RRZE-Webteam/rrze-green-office/issues)
 ![GitHub milestone details](https://img.shields.io/github/milestones/progress-percent/RRZE-Webteam/rrze-green-office/3)
 
-Plugin for the Green Office of the FAU to calculate CO2 output
-
 # RRZE Green Office
 
-This plugin is inspired by the famous "Hello Dolly" plugin and brings the dog Lenny to your WordPress site. It supports both a shortcode and a Gutenberg block.
+Plugin for the Green Office of the FAU to calculate CO2 output
 
 ## Using as a Shortcode
 
