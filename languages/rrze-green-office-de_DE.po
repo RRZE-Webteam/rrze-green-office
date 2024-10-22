@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: RRZE Green Office\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-11 06:56+0000\n"
-"PO-Revision-Date: 2024-10-21 11:24+0000\n"
+"PO-Revision-Date: 2024-10-22 07:30+0000\n"
 "Last-Translator: Barbara Bothe\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -39,11 +39,11 @@ msgstr "< 2.5km"
 msgid "> 50km"
 msgstr "> 50km"
 
-#: includes/Main.php:111
+#: includes/Main.php:107
 msgid "Assumptions:"
 msgstr "Annahmen:"
 
-#: includes/Main.php:91
+#: includes/Main.php:87
 msgid "Bicycle"
 msgstr "Fahrrad"
 
@@ -55,7 +55,7 @@ msgstr "Fahrrad / E-Rad / E-Roller / Pedelec"
 msgid "Bike"
 msgstr "Fahrrad"
 
-#: includes/Main.php:101
+#: includes/Main.php:97
 msgid "Brief Analysis:"
 msgstr "Kurzanalyse:"
 
@@ -63,7 +63,7 @@ msgstr "Kurzanalyse:"
 msgid "Calculate"
 msgstr "Berechnen"
 
-#: includes/Shortcode.php:51 includes/Main.php:93 includes/Main.php:94
+#: includes/Shortcode.php:51 includes/Main.php:89 includes/Main.php:90
 #: includes/Config.php:155
 msgid "Car"
 msgstr "Auto"
@@ -76,15 +76,15 @@ msgstr "Verkehrsmittel wählen"
 msgid "CO2 Emission Rates"
 msgstr "CO₂-Ausstoß-Werte"
 
-#: includes/Main.php:99
+#: includes/Main.php:95
 msgid "could save you"
 msgstr "könnte Ihnen einsparen"
 
-#: includes/Main.php:95
+#: includes/Main.php:91
 msgid "CO₂ Emission"
 msgstr "CO₂-Ausstoß"
 
-#: includes/Main.php:118
+#: includes/Main.php:114
 msgid "CO₂ equivalents [kg/year]"
 msgstr "CO₂-Äquivalente [kg/Jahr]"
 
@@ -97,17 +97,17 @@ msgstr ""
 "Einsparmöglichkeiten durch alternative Verkehrsmittel und sehen Sie, wie Sie "
 "im Vergleich zu anderen abschneiden."
 
-#: includes/Main.php:119
-#, php-format
+#. Number of weeks
+#: includes/Main.php:116
 #| msgid ""
 #| "Due to lecture-free time or holidays and public holidays, we calculate an "
-#| "average of 43.5 weeks per year in which you travel to FAU."
+#| "average of %s weeks per year in which you travel to FAU."
 msgid ""
 "Due to lecture-free time or holidays and public holidays, we calculate an "
-"average of %s weeks per year in which you travel to FAU."
+"average of %f weeks per year in which you travel to FAU."
 msgstr ""
 "Aufgrund vorlesungsfreier Zeit bzw. Urlaubs- und Feiertage rechnen wir im "
-"Durchschnitt mit %s Wochen pro Jahr, in denen zur FAU gefahren wird."
+"Durchschnitt mit %f Wochen pro Jahr, in denen zur FAU gefahren wird."
 
 #: includes/Shortcode.php:36
 msgid "e.g., 4.5"
@@ -129,7 +129,7 @@ msgstr "Mitarbeiter/innen"
 msgid "Follow the white rabbit."
 msgstr "Follow the white rabbit."
 
-#: includes/Main.php:104
+#: includes/Main.php:100
 #| msgid "has the lowest CO₂ emission with"
 msgid "has the lowest CO₂ emissions with"
 msgstr "hat den geringsten CO₂-Ausstoß mit"
@@ -146,27 +146,27 @@ msgstr "https://github.com/RRZE-Webteam/rrze-green-office/"
 msgid "I am:"
 msgstr "Ich bin:"
 
-#: includes/Main.php:103
+#: includes/Main.php:99
 msgid "in their distance category."
 msgstr "in Ihrer Entfernungskategorie."
 
-#: includes/Main.php:110
+#: includes/Main.php:106
 msgid "is the most used mode of transport."
 msgstr "ist das meistgenutzte Verkehrsmittel."
 
-#: includes/Main.php:107
+#: includes/Main.php:103
 msgid "kg CO₂ per year could be saved."
 msgstr "kg CO₂ pro Jahr könnten eingespart werden."
 
-#: includes/Main.php:106
+#: includes/Main.php:102
 msgid "kg CO₂ per year."
 msgstr "kg CO₂ pro Jahr."
 
-#: includes/Main.php:105
+#: includes/Main.php:101
 msgid "kg per year."
 msgstr "kg pro Jahr."
 
-#: includes/Main.php:113
+#: includes/Main.php:109
 msgid "Modal Split of the selected distance"
 msgstr "Modal Split der ausgewählten Entfernung"
 
@@ -182,7 +182,7 @@ msgstr "Meine Wegstrecke zur FAU in km:"
 msgid "On Foot"
 msgstr "Zu Fuß"
 
-#: includes/Shortcode.php:48 includes/Main.php:90
+#: includes/Shortcode.php:48 includes/Main.php:86
 msgid "On foot"
 msgstr "Zu Fuß"
 
@@ -190,7 +190,7 @@ msgstr "Zu Fuß"
 msgid "Other"
 msgstr "Andere"
 
-#: includes/Main.php:109
+#: includes/Main.php:105
 msgid "Please enter valid values ​​for distance and frequency."
 msgstr "Bitte geben Sie gültige Werte für Distanz und Häufigkeit ein."
 
@@ -204,7 +204,7 @@ msgstr "Plugins: %1$s: %2$s"
 msgid "Provides a CO2 calculator."
 msgstr "CO2-Rechner als Shortcode oder Block auf die Website einbinden."
 
-#: includes/Shortcode.php:50 includes/Main.php:92 includes/Config.php:154
+#: includes/Shortcode.php:50 includes/Main.php:88 includes/Config.php:154
 msgid "Public Transport"
 msgstr "ÖPNV"
 
@@ -221,7 +221,7 @@ msgstr "RRZE-Webteam"
 msgid "Select"
 msgstr "Auswählen"
 
-#: includes/Main.php:97 includes/Main.php:114
+#: includes/Main.php:93 includes/Main.php:110
 msgid "Share [%]"
 msgstr "Anteil [%]"
 
@@ -270,34 +270,34 @@ msgstr "Transportmittel-Daten"
 msgid "Trips per week:"
 msgstr "Fahrten pro Woche:"
 
-#: includes/Main.php:96 includes/Main.php:112
+#: includes/Main.php:92 includes/Main.php:108
 msgid "Usage (%)"
 msgstr "Nutzung (%)"
 
-#: includes/Main.php:102
+#: includes/Main.php:98
 msgid "uses"
 msgstr "nutzen"
 
-#: includes/Settings.php:78 includes/Settings.php:166
+#: includes/Settings.php:78 includes/Settings.php:172
 msgid "Working Weeks per Year"
 msgstr "Arbeitswochen pro Jahr"
 
-#: includes/Main.php:108
+#: includes/Main.php:104
 msgid "would cause you to emit kg CO₂ more per year."
 msgstr "würde dazu führen, dass Sie kg CO₂ mehr pro Jahr ausstoßen."
 
-#: includes/Main.php:98
+#: includes/Main.php:94
 msgid "Your annual CO₂ emission is:"
 msgstr "Ihr jährlicher CO₂-Ausstoß beträgt:"
 
-#: includes/Main.php:100
+#: includes/Main.php:96
 msgid "Your annual CO₂ emissions are:"
 msgstr "Ihr jährlicher CO₂-Ausstoß beträgt:"
 
-#: includes/Main.php:117
+#: includes/Main.php:113
 msgid "Your CO₂ emission"
 msgstr "Ihr CO₂-Ausstoß"
 
-#: includes/Main.php:115 includes/Main.php:116
+#: includes/Main.php:111 includes/Main.php:112
 msgid "Your current CO₂ emission"
 msgstr "Ihr aktueller CO₂-Ausstoß"
