@@ -1,32 +1,3 @@
 .rrze-green-office {
-    &.shortcode {
-        border-style: solid;
-    }
-    &.block {
-        border-style: dotted;
-    }
-    .wouf-ucfirst {
-        text-transform: lowercase;
-    }
-    
-    .wouf-ucfirst::first-letter {
-        text-transform: uppercase;
-    }
-    
-    .wouf-uppercase {
-        text-transform: uppercase;
-    }
 
-    .wouf-lowercase {
-        text-transform: uppercase;
-    }
-    .wouf-small {
-        font-size: 0.8rem;
-    }
-    .wouf-large {
-        font-size: 1.5rem;
-    }
-    .wouf-xlarge {
-        font-size: 2rem;
-    }
 }

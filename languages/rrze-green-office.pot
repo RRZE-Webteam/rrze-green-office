@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RRZE Green Office\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 11:23+0000\n"
+"POT-Creation-Date: 2024-10-22 07:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -40,11 +40,11 @@ msgstr ""
 msgid "> 50km"
 msgstr ""
 
-#: includes/Main.php:111
+#: includes/Main.php:107
 msgid "Assumptions:"
 msgstr ""
 
-#: includes/Main.php:91
+#: includes/Main.php:87
 msgid "Bicycle"
 msgstr ""
 
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Bike"
 msgstr ""
 
-#: includes/Main.php:101
+#: includes/Main.php:97
 msgid "Brief Analysis:"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Calculate"
 msgstr ""
 
-#: includes/Shortcode.php:51 includes/Main.php:93 includes/Main.php:94
+#: includes/Shortcode.php:51 includes/Main.php:89 includes/Main.php:90
 #: includes/Config.php:155
 msgid "Car"
 msgstr ""
@@ -77,15 +77,15 @@ msgstr ""
 msgid "CO2 Emission Rates"
 msgstr ""
 
-#: includes/Main.php:99
+#: includes/Main.php:95
 msgid "could save you"
 msgstr ""
 
-#: includes/Main.php:95
+#: includes/Main.php:91
 msgid "CO₂ Emission"
 msgstr ""
 
-#: includes/Main.php:118
+#: includes/Main.php:114
 msgid "CO₂ equivalents [kg/year]"
 msgstr ""
 
@@ -95,11 +95,11 @@ msgid ""
 "means of transport, and see how you compare to others."
 msgstr ""
 
-#: includes/Main.php:119
-#, php-format
+#. Number of weeks
+#: includes/Main.php:116
 msgid ""
 "Due to lecture-free time or holidays and public holidays, we calculate an "
-"average of %s weeks per year in which you travel to FAU."
+"average of %f weeks per year in which you travel to FAU."
 msgstr ""
 
 #: includes/Shortcode.php:36
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Follow the white rabbit."
 msgstr ""
 
-#: includes/Main.php:104
+#: includes/Main.php:100
 msgid "has the lowest CO₂ emissions with"
 msgstr ""
 
@@ -138,27 +138,27 @@ msgstr ""
 msgid "I am:"
 msgstr ""
 
-#: includes/Main.php:103
+#: includes/Main.php:99
 msgid "in their distance category."
 msgstr ""
 
-#: includes/Main.php:110
+#: includes/Main.php:106
 msgid "is the most used mode of transport."
 msgstr ""
 
-#: includes/Main.php:107
+#: includes/Main.php:103
 msgid "kg CO₂ per year could be saved."
 msgstr ""
 
-#: includes/Main.php:106
+#: includes/Main.php:102
 msgid "kg CO₂ per year."
 msgstr ""
 
-#: includes/Main.php:105
+#: includes/Main.php:101
 msgid "kg per year."
 msgstr ""
 
-#: includes/Main.php:113
+#: includes/Main.php:109
 msgid "Modal Split of the selected distance"
 msgstr ""
 
@@ -174,7 +174,7 @@ msgstr ""
 msgid "On Foot"
 msgstr ""
 
-#: includes/Shortcode.php:48 includes/Main.php:90
+#: includes/Shortcode.php:48 includes/Main.php:86
 msgid "On foot"
 msgstr ""
 
@@ -182,7 +182,7 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: includes/Main.php:109
+#: includes/Main.php:105
 msgid "Please enter valid values ​​for distance and frequency."
 msgstr ""
 
@@ -196,7 +196,7 @@ msgstr ""
 msgid "Provides a CO2 calculator."
 msgstr ""
 
-#: includes/Shortcode.php:50 includes/Main.php:92 includes/Config.php:154
+#: includes/Shortcode.php:50 includes/Main.php:88 includes/Config.php:154
 msgid "Public Transport"
 msgstr ""
 
@@ -212,7 +212,7 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: includes/Main.php:97 includes/Main.php:114
+#: includes/Main.php:93 includes/Main.php:110
 msgid "Share [%]"
 msgstr ""
 
@@ -257,34 +257,34 @@ msgstr ""
 msgid "Trips per week:"
 msgstr ""
 
-#: includes/Main.php:96 includes/Main.php:112
+#: includes/Main.php:92 includes/Main.php:108
 msgid "Usage (%)"
 msgstr ""
 
-#: includes/Main.php:102
+#: includes/Main.php:98
 msgid "uses"
 msgstr ""
 
-#: includes/Settings.php:78 includes/Settings.php:166
+#: includes/Settings.php:78 includes/Settings.php:172
 msgid "Working Weeks per Year"
 msgstr ""
 
-#: includes/Main.php:108
+#: includes/Main.php:104
 msgid "would cause you to emit kg CO₂ more per year."
 msgstr ""
 
-#: includes/Main.php:98
+#: includes/Main.php:94
 msgid "Your annual CO₂ emission is:"
 msgstr ""
 
-#: includes/Main.php:100
+#: includes/Main.php:96
 msgid "Your annual CO₂ emissions are:"
 msgstr ""
 
-#: includes/Main.php:117
+#: includes/Main.php:113
 msgid "Your CO₂ emission"
 msgstr ""
 
-#: includes/Main.php:115 includes/Main.php:116
+#: includes/Main.php:111 includes/Main.php:112
 msgid "Your current CO₂ emission"
 msgstr ""
