@@ -11,6 +11,7 @@ class Settings {
      */
     private mixed $options;
     private mixed $labels;
+    private array $allowedHTML;
 
     public function __construct() {
         add_action( 'admin_init', [$this, 'registerSettings'] );
@@ -18,7 +19,39 @@ class Settings {
 
         $this->options = self::getOption('rrze-green-office');
         $this->labels = Config::getLabels();
-
+        $this->allowedHTML = [
+            'p' => [
+                'class' => true,
+                'style' => true,
+            ],
+            'label' => [
+                'for' => true,
+                'class' => true,
+            ],
+            'input' => [
+                'class' => true,
+                'type' => true,
+                'step' => true,
+                'min' => true,
+                'max' => true,
+                'name' => true,
+                'id' => true,
+                'value' => true,
+            ],
+            'table' => [
+                'class' => true,
+            ],
+            'tr' => [
+                'class' => true,
+            ],
+            'th' => [
+                'scope' => true,
+                'class' => true,
+            ],
+            'td' => [
+                'class' => true,
+            ],
+        ];
     }
 
     public static function getOption($option) {
@@ -123,8 +156,8 @@ class Settings {
                         continue;
                     foreach ($data as $transportMode => $value) {
                         $output .= '<td>'
-                            . '<label class="sr-only screen-reader-text">' . $this->labels[$category] . ' ' . $this->labels[$transportMode] . '</label>'
-                            . '<input name="rrze-green-office[transport-data][' . $i . '][' . $cat . '][' . $transportMode . ']" type="number" step="0.001" value="' . $value . '">'
+                            . '<label class="sr-only screen-reader-text" for="rrze-green-office_transport-data_' . $i . '_' . $cat . '_' . $transportMode . '" >' . $this->labels[$category] . ' ' . $this->labels[$transportMode] . '</label>'
+                            . '<input name="rrze-green-office[transport-data][' . $i . '][' . $cat . '][' . $transportMode . ']" id="rrze-green-office_transport-data_' . $i . '_' . $cat . '_' . $transportMode . '" type="number" step="0.001" value="' . $value . '">'
                             . '</td>';
                     }
                 }
@@ -133,7 +166,7 @@ class Settings {
             $output .= '</table>';
         }
 
-        echo wp_kses_post($output);
+        echo wp_kses($output, $this->allowedHTML);
     }
 
     public function renderFieldPeopleCount($args) {
@@ -147,13 +180,14 @@ class Settings {
                 . '<input type="number" step="1" min="0" name="rrze-green-office[people-count][' . $cat .  ']" id="rrze-green-office_people-count_' . $cat .  '" value="' . $value . '">'
                 . '</p>';
         }
-        echo wp_kses_post($output);
+        echo wp_kses($output, $this->allowedHTML);
     }
 
     public function co2EmissionRates($args) {
         $co2EmissionRates = $this->options['co2-emission-rates'] ?? false;
         if (!$co2EmissionRates) return;
 
+        $output = '';
         foreach ($co2EmissionRates as $cat => $value) {
             $output .= '<p><label for="rrze-green-office_co2-emission-rates_' . $cat .  '" >'
                 . $this->labels[$cat]
@@ -161,18 +195,19 @@ class Settings {
                 . '<input type="number" step="1" min="0" name="rrze-green-office[co2-emission-rates][' . $cat .  ']" id="rrze-green-office_co2-emission-rates_' . $cat .  '" value="' . $value . '">'
                 . '</p>';
         }
-        echo wp_kses_post($output);
+        echo wp_kses($output, $this->allowedHTML);
     }
 
     public function weeksPerYear($args) {
         $weeksPerYear = $this->options['weeks-per-year'] ?? false;
         if (!$weeksPerYear) return;
 
-        echo wp_kses_post('<p><label for="rrze-green-office_weeks-per-year" >'
-            . esc_html__('Working Weeks per Year', 'rrze-green-office')
+        $output = '<p><label for="rrze-green-office_weeks-per-year" >'
+            . __('Working Weeks per Year', 'rrze-green-office')
             . '</label>'
             . '<input type="number" step="0.1" min="0" name="rrze-green-office[weeks-per-year]" id="rrze-green-office_weeks-per-year" value="' . $weeksPerYear . '">'
-            . '</p>');
+            . '</p>';
+        echo wp_kses($output, $this->allowedHTML);
     }
 
     /**

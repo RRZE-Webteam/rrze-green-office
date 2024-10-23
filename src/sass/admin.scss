@@ -4,4 +4,15 @@
         min-width: 100px;
         margin-right: 1em;
     }
+    .form-table {
+        table {
+            &:not(:last-child) {
+                margin-bottom: 2em;
+            }
+            th {
+                padding: 15px 10px;
+                vertical-align: middle;
+            }
+        }
+    }
 }
