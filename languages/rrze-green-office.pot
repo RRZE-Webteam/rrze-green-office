@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RRZE Green Office\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-22 07:30+0000\n"
+"POT-Creation-Date: 2024-10-24 11:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Choose mode of transport"
 msgstr ""
 
-#: includes/Settings.php:71
+#: includes/Settings.php:104
 msgid "CO2 Emission Rates"
 msgstr ""
 
@@ -97,9 +97,10 @@ msgstr ""
 
 #. Number of weeks
 #: includes/Main.php:116
+#, php-format
 msgid ""
 "Due to lecture-free time or holidays and public holidays, we calculate an "
-"average of %f weeks per year in which you travel to FAU."
+"average of %s weeks per year in which you travel to FAU."
 msgstr ""
 
 #: includes/Shortcode.php:36
@@ -118,7 +119,7 @@ msgstr ""
 msgid "Employees"
 msgstr ""
 
-#: includes/Settings.php:92
+#: includes/Settings.php:125
 msgid "Follow the white rabbit."
 msgstr ""
 
@@ -244,12 +245,12 @@ msgstr ""
 msgid "Total"
 msgstr ""
 
-#: includes/Settings.php:64
+#: includes/Settings.php:97
 msgid "Total People"
 msgstr ""
 
 #. Use $args' label_for to populate the id inside the callback.
-#: includes/Settings.php:48 includes/Settings.php:57
+#: includes/Settings.php:81 includes/Settings.php:90
 msgid "Transport Data"
 msgstr ""
 
@@ -265,7 +266,7 @@ msgstr ""
 msgid "uses"
 msgstr ""
 
-#: includes/Settings.php:78 includes/Settings.php:172
+#: includes/Settings.php:111 includes/Settings.php:204
 msgid "Working Weeks per Year"
 msgstr ""
 

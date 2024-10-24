@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: RRZE Green Office\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-11 06:56+0000\n"
-"PO-Revision-Date: 2024-10-22 07:30+0000\n"
+"PO-Revision-Date: 2024-10-24 11:03+0000\n"
 "Last-Translator: Barbara Bothe\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -72,7 +72,7 @@ msgstr "Auto"
 msgid "Choose mode of transport"
 msgstr "Verkehrsmittel wählen"
 
-#: includes/Settings.php:71
+#: includes/Settings.php:104
 msgid "CO2 Emission Rates"
 msgstr "CO₂-Ausstoß-Werte"
 
@@ -99,15 +99,16 @@ msgstr ""
 
 #. Number of weeks
 #: includes/Main.php:116
+#, php-format
 #| msgid ""
 #| "Due to lecture-free time or holidays and public holidays, we calculate an "
-#| "average of %s weeks per year in which you travel to FAU."
+#| "average of %f weeks per year in which you travel to FAU."
 msgid ""
 "Due to lecture-free time or holidays and public holidays, we calculate an "
-"average of %f weeks per year in which you travel to FAU."
+"average of %s weeks per year in which you travel to FAU."
 msgstr ""
 "Aufgrund vorlesungsfreier Zeit bzw. Urlaubs- und Feiertage rechnen wir im "
-"Durchschnitt mit %f Wochen pro Jahr, in denen zur FAU gefahren wird."
+"Durchschnitt mit %s Wochen pro Jahr, in denen zur FAU gefahren wird."
 
 #: includes/Shortcode.php:36
 msgid "e.g., 4.5"
@@ -125,7 +126,7 @@ msgstr "Mitarbeiter/in"
 msgid "Employees"
 msgstr "Mitarbeiter/innen"
 
-#: includes/Settings.php:92
+#: includes/Settings.php:125
 msgid "Follow the white rabbit."
 msgstr "Follow the white rabbit."
 
@@ -257,12 +258,12 @@ msgstr ""
 msgid "Total"
 msgstr "Gesamt"
 
-#: includes/Settings.php:64
+#: includes/Settings.php:97
 msgid "Total People"
 msgstr "Gesamtzahlen"
 
 #. Use $args' label_for to populate the id inside the callback.
-#: includes/Settings.php:48 includes/Settings.php:57
+#: includes/Settings.php:81 includes/Settings.php:90
 msgid "Transport Data"
 msgstr "Transportmittel-Daten"
 
@@ -278,7 +279,7 @@ msgstr "Nutzung (%)"
 msgid "uses"
 msgstr "nutzen"
 
-#: includes/Settings.php:78 includes/Settings.php:172
+#: includes/Settings.php:111 includes/Settings.php:204
 msgid "Working Weeks per Year"
 msgstr "Arbeitswochen pro Jahr"
 

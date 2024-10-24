@@ -113,7 +113,7 @@ class Main
             'your_co2_emission' => __('Your CO₂ emission', 'rrze-green-office'),
             'co2_equivalents' => __('CO₂ equivalents [kg/year]', 'rrze-green-office'),
             /* translators: Number of weeks*/
-            'average_weeks' => sprintf(__('Due to lecture-free time or holidays and public holidays, we calculate an average of %f weeks per year in which you travel to FAU.', 'rrze-green-office'), $options['weeks-per-year']),
+            'average_weeks' => sprintf(__('Due to lecture-free time or holidays and public holidays, we calculate an average of %s weeks per year in which you travel to FAU.', 'rrze-green-office'), (string)number_format_i18n($options['weeks-per-year'], 1)),
         );
 
         wp_localize_script('green-office-chart-custom', 'chartTranslations', $chart_translations);
