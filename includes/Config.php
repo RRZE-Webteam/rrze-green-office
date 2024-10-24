@@ -13,10 +13,6 @@ class Config
         $this->pluginFile = $pluginFile;
     }
 
-    public static function getDefaultAttributes() {
-        return [];
-    }
-
     public static function getDefaultSettings() {
         return [
             'transport-data' => [

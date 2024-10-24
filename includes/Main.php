@@ -43,8 +43,7 @@ class Main
 
         // Initialize Shortcode and BlockEditor
         $config = new Config($this->pluginFile);
-        $default_attributes = $config::getDefaultAttributes();
-        $shortcode = new Shortcode($default_attributes);
+        $shortcode = new Shortcode();
         $settings = new Settings();
     }
 
@@ -122,13 +121,6 @@ class Main
         wp_localize_script('green-office-chart-custom', 'chartPeople', $settings['people-count']);
         wp_localize_script('green-office-chart-custom', 'chartRates', $settings['co2-emission-rates']);
         wp_localize_script('green-office-chart-custom', 'weeksPerYear', [$settings['weeks-per-year']]);
-
-        wp_register_style(
-            'green-office-frontend-style',
-            plugins_url('assets/css/frontend.css', plugin_basename($this->pluginFile)),
-            [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/frontend.css') ?: $this->pluginVersion
-        );
     }
 
     /**
@@ -137,10 +129,11 @@ class Main
     public function enqueueAssets()
     {
         // Enqueue registered assets for block editor and frontend
-        wp_enqueue_style('green-office-frontend-style');
+
     }
 
     public function adminEnqueueAssets() {
+        wp_enqueue_style('green-office-frontend-style');
         wp_enqueue_style(
             'rrze-green-office-admin-style',
             plugins_url('assets/css/admin.css', plugin_basename($this->pluginFile)),

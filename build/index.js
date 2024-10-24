@@ -244,7 +244,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rrze/co2-emissions-calculator","version":"1.0.0","title":"CO2 Emissions Calculator","category":"widgets","icon":"globe","description":"Interactive CO2 Calculator","example":{},"supports":{"html":false},"textdomain":"block-template-create-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rrze/co2-emissions-calculator","version":"1.0.0","title":"CO2 Emissions Calculator","category":"widgets","icon":"globe","description":"Interactive CO2 Calculator","example":{},"supports":{"html":false},"textdomain":"rrze-green-office","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","render":"file:./render.php"}');
 
 /***/ })
 

@@ -7,28 +7,18 @@ defined('ABSPATH') || exit;
 class Shortcode
 {
 
-    protected $defaultAttributes;
-
-    public function __construct($defaultAttributes)
+    public function __construct()
     {
-        $this->defaultAttributes = $defaultAttributes;
         add_shortcode('co2_emissions_calculator', [$this, 'renderShortcode']);
     }
 
-    public function renderShortcode($attributes = [])
+    public static function renderShortcode()
     {
         // Enqueue assets
-        //wp_enqueue_style('greenoffice-frontend-style');
         wp_enqueue_script('green-office-chart');
         wp_enqueue_script('green-office-chart-custom');
 
         // Generate the output
-        return $this->generateShortcodeOutput($attributes);
-    }
-
-    public static function generateShortcodeOutput($attributes)
-    {
-        
         $output = '<div class="rrze-green-office co2-emissions-calculator"><p>' . __('Determine your current CO₂ emissions, discover savings through alternative means of transport, and see how you compare to others.', 'rrze-green-office') . '</p>
             <div class="input-container">
                 <div class="input-distance">
