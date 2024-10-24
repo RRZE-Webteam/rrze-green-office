@@ -45,7 +45,6 @@ class Main
         $config = new Config($this->pluginFile);
         $default_attributes = $config::getDefaultAttributes();
         $shortcode = new Shortcode($default_attributes);
-        $blockeditor = new BlockEditor($default_attributes);
         $settings = new Settings();
     }
 
@@ -67,17 +66,17 @@ class Main
         // Register scripts and styles
         wp_register_script(
             'green-office-chart',
-            plugins_url('src/js/chart.js', plugin_basename($this->pluginFile)),
+            plugins_url('assets/js/chart.js', plugin_basename($this->pluginFile)),
             ['jquery'],
-            filemtime(plugin_dir_path($this->pluginFile) . 'src/js/chart.js') ?: $this->pluginVersion,
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/js/chart.js') ?: $this->pluginVersion,
             true
         );
 
         wp_register_script(
             'green-office-chart-custom',
-            plugins_url('src/js/chart-custom.js', plugin_basename($this->pluginFile)),
+            plugins_url('assets/js/chart-custom.js', plugin_basename($this->pluginFile)),
             ['jquery'],
-            filemtime(plugin_dir_path($this->pluginFile) . 'src/js/chart-custom.js') ?: $this->pluginVersion,
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/js/chart-custom.js') ?: $this->pluginVersion,
             true
         );
 
@@ -126,25 +125,10 @@ class Main
 
         wp_register_style(
             'green-office-frontend-style',
-            plugins_url('build/frontend.css', plugin_basename($this->pluginFile)),
+            plugins_url('assets/css/frontend.css', plugin_basename($this->pluginFile)),
             [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/frontend.css') ?: $this->pluginVersion
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/frontend.css') ?: $this->pluginVersion
         );
-
-        /*wp_register_script(
-            'green-office-block-editor-script',
-            plugins_url('build/block.js', plugin_basename($this->pluginFile)),
-            ['wp-blocks', 'wp-element', 'wp-editor'],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/block.js') ?: $this->pluginVersion,
-            true
-        );
-
-        wp_register_style(
-            'green-office-block-editor-style',
-            plugins_url('build/editor.css', plugin_basename($this->pluginFile)),
-            [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/editor.css') ?: $this->pluginVersion
-        );*/
     }
 
     /**
@@ -159,9 +143,9 @@ class Main
     public function adminEnqueueAssets() {
         wp_enqueue_style(
             'rrze-green-office-admin-style',
-            plugins_url('build/admin.css', plugin_basename($this->pluginFile)),
+            plugins_url('assets/css/admin.css', plugin_basename($this->pluginFile)),
             [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/admin.css') ?: $this->pluginVersion
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/admin.css') ?: $this->pluginVersion
         );
     }
 }

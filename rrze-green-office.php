@@ -145,4 +145,10 @@ function onLoaded()
 
     // Initialize Main class && call onLoaded method.
     (new Main(__FILE__))->onLoaded();
+
+    add_action('init', __NAMESPACE__ . '\createBlockRrzeGreenOffice');
+}
+
+function createBlockRrzeGreenOffice() {
+    register_block_type( __DIR__ . '/build' );
 }
