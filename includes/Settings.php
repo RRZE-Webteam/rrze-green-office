@@ -152,7 +152,7 @@ class Settings {
                 $output .= '<tr>';
                 $output .= '<th scope="row">' . $this->labels['transport-data'][$i] . '</th>';
                 foreach ($categories as $cat => $data) {
-                    if ($cat == $category)
+                    if ($cat != $category)
                         continue;
                     foreach ($data as $transportMode => $value) {
                         $output .= '<td>'
@@ -170,8 +170,8 @@ class Settings {
     }
 
     public function renderFieldPeopleCount($args) {
-        $peopleCount = $this->options['people-count'] ?? false;
-        if (!$peopleCount) return;
+        $peopleCount = $this->options['people-count'] ?? '';
+
         $output = '';
         foreach ($peopleCount as $cat => $value) {
             $output .= '<p><label for="rrze-green-office_people-count_' . $cat .  '">'
@@ -184,8 +184,7 @@ class Settings {
     }
 
     public function co2EmissionRates($args) {
-        $co2EmissionRates = $this->options['co2-emission-rates'] ?? false;
-        if (!$co2EmissionRates) return;
+        $co2EmissionRates = $this->options['co2-emission-rates'] ?? '';
 
         $output = '';
         foreach ($co2EmissionRates as $cat => $value) {
@@ -199,8 +198,7 @@ class Settings {
     }
 
     public function weeksPerYear($args) {
-        $weeksPerYear = $this->options['weeks-per-year'] ?? false;
-        if (!$weeksPerYear) return;
+        $weeksPerYear = $this->options['weeks-per-year'] ?? '';
 
         $output = '<p><label for="rrze-green-office_weeks-per-year" >'
             . __('Working Weeks per Year', 'rrze-green-office')
