@@ -6,7 +6,6 @@ Plugin for the FAU Green Office to calculate CO2 output
 [![Release Version](https://img.shields.io/github/v/release/rrze-webteam/rrze-green-office?label=Release+Version)](https://github.com/rrze-webteam/rrze-green-office/releases/)
 [![GitHub License](https://img.shields.io/github/license/rrze-webteam/rrze-green-office)](https://github.com/RRZE-Webteam/rrze-green-office)
 [![GitHub issues](https://img.shields.io/github/issues/RRZE-Webteam/rrze-green-office)](https://github.com/RRZE-Webteam/rrze-green-office/issues)
-![GitHub milestone details](https://img.shields.io/github/milestones/progress-percent/RRZE-Webteam/rrze-green-office/3)
 
 ## Version
 
