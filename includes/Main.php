@@ -7,8 +7,7 @@ defined('ABSPATH') || exit;
 /**
  * Main class
  */
-class Main
-{
+class Main {
     /**
      * The full path and file name of the plugin file.
      * @var string
@@ -25,16 +24,14 @@ class Main
      * Assign values to variables.
      * @param string $pluginFile Path and file name of the plugin file
      */
-    public function __construct($pluginFile)
-    {
+    public function __construct($pluginFile) {
         $this->pluginFile = $pluginFile;
     }
 
     /**
      * This method is called when the class is instantiated.
      */
-    public function onLoaded()
-    {
+    public function onLoaded() {
         $this->setPluginVersion();
 
         add_action('init', [$this, 'registerAssets']);
@@ -43,9 +40,7 @@ class Main
 
         // Initialize Shortcode and BlockEditor
         $config = new Config($this->pluginFile);
-        $default_attributes = $config::getDefaultAttributes();
-        $shortcode = new Shortcode($default_attributes);
-        $blockeditor = new BlockEditor($default_attributes);
+        $shortcode = new Shortcode();
         $settings = new Settings();
     }
 
@@ -53,8 +48,7 @@ class Main
      * Set the version of the plugin.
      * @return string The version of the plugin
      */
-    protected function setPluginVersion()
-    {
+    protected function setPluginVersion() {
         $pluginData = get_file_data($this->pluginFile, ['Version' => 'Version'], false);
         $this->pluginVersion = $pluginData['Version'] ?? '1.0.0';
     }    
@@ -62,22 +56,21 @@ class Main
     /**
      * Register assets.
      */
-    public function registerAssets()
-    {
+    public function registerAssets() {
         // Register scripts and styles
         wp_register_script(
             'green-office-chart',
-            plugins_url('src/js/chart.js', plugin_basename($this->pluginFile)),
+            plugins_url('assets/js/chart.js', plugin_basename($this->pluginFile)),
             ['jquery'],
-            filemtime(plugin_dir_path($this->pluginFile) . 'src/js/chart.js') ?: $this->pluginVersion,
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/js/chart.js') ?: $this->pluginVersion,
             true
         );
 
         wp_register_script(
             'green-office-chart-custom',
-            plugins_url('src/js/chart-custom.js', plugin_basename($this->pluginFile)),
+            plugins_url('assets/js/chart-custom.js', plugin_basename($this->pluginFile)),
             ['jquery'],
-            filemtime(plugin_dir_path($this->pluginFile) . 'src/js/chart-custom.js') ?: $this->pluginVersion,
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/js/chart-custom.js') ?: $this->pluginVersion,
             true
         );
 
@@ -125,43 +118,30 @@ class Main
         wp_localize_script('green-office-chart-custom', 'weeksPerYear', [$settings['weeks-per-year']]);
 
         wp_register_style(
-            'green-office-frontend-style',
-            plugins_url('build/frontend.css', plugin_basename($this->pluginFile)),
+            'rrze-green-office-style',
+            plugins_url('assets/css/rrze-green-office.css', plugin_basename($this->pluginFile)),
             [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/frontend.css') ?: $this->pluginVersion
-        );
-
-        /*wp_register_script(
-            'green-office-block-editor-script',
-            plugins_url('build/block.js', plugin_basename($this->pluginFile)),
-            ['wp-blocks', 'wp-element', 'wp-editor'],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/block.js') ?: $this->pluginVersion,
-            true
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/rrze-green-office.css') ?: $this->pluginVersion
         );
 
         wp_register_style(
-            'green-office-block-editor-style',
-            plugins_url('build/editor.css', plugin_basename($this->pluginFile)),
+            'rrze-green-office-admin-style',
+            plugins_url('assets/css/rrze-green-office-admin.css', plugin_basename($this->pluginFile)),
             [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/editor.css') ?: $this->pluginVersion
-        );*/
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/rrze-green-office-admin.css') ?: $this->pluginVersion
+        );
+
     }
 
     /**
      * Enqueue assets.
      */
-    public function enqueueAssets()
-    {
-        // Enqueue registered assets for block editor and frontend
-        wp_enqueue_style('green-office-frontend-style');
+    public function enqueueAssets() {
+        //wp_enqueue_style('rrze-green-office-style');
     }
 
     public function adminEnqueueAssets() {
-        wp_enqueue_style(
-            'rrze-green-office-admin-style',
-            plugins_url('build/admin.css', plugin_basename($this->pluginFile)),
-            [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'build/admin.css') ?: $this->pluginVersion
-        );
+        wp_enqueue_style('rrze-green-office-style');
+        wp_enqueue_style('rrze-green-office-admin-style');
     }
 }

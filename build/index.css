@@ -1,0 +1,17 @@
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.post-type-page .editor-styles-wrapper p.wp-block-rrze-co2-emissions-calculator {
+  padding: 2em 2em 2em 12em;
+  background: #F6F6F6 url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzllOWU5ZSIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgICA8cmVjdCB4PSI2MCIgeT0iODAiIHdpZHRoPSI1MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNjNGM0YzQiIC8+CiAgICA8cmVjdCB4PSIxMzAiIHk9IjUwIiB3aWR0aD0iNTAiIGhlaWdodD0iMTMwIiBmaWxsPSIjOWU5ZTllIiAvPgogICAgPHJlY3QgeD0iMjAwIiB5PSIzMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iIzc0NzQ3NCIgLz4KICAgIDxyZWN0IHg9IjI3MCIgeT0iMTAwIiB3aWR0aD0iNTAiIGhlaWdodD0iODAiIGZpbGw9IiM3YTdhN2EiIC8+Cjwvc3ZnPgo=) no-repeat;
+  background-size: contain;
+  border: 1px solid var(--color-ContentBorders, #dfe6ec);
+  color: #353535;
+}
+
+/*# sourceMappingURL=index.css.map*/

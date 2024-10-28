@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.post-type-page .editor-styles-wrapper {
+	p.wp-block-rrze-co2-emissions-calculator {
+		padding: 2em 2em 2em 12em;
+		background: #F6F6F6 url('../assets/img/chart.svg') no-repeat;
+		background-size: contain;
+		border: 1px solid var(--color-ContentBorders, #dfe6ec);
+		color: #353535;
+	}
+}
