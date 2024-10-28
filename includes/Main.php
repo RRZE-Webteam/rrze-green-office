@@ -7,8 +7,7 @@ defined('ABSPATH') || exit;
 /**
  * Main class
  */
-class Main
-{
+class Main {
     /**
      * The full path and file name of the plugin file.
      * @var string
@@ -25,16 +24,14 @@ class Main
      * Assign values to variables.
      * @param string $pluginFile Path and file name of the plugin file
      */
-    public function __construct($pluginFile)
-    {
+    public function __construct($pluginFile) {
         $this->pluginFile = $pluginFile;
     }
 
     /**
      * This method is called when the class is instantiated.
      */
-    public function onLoaded()
-    {
+    public function onLoaded() {
         $this->setPluginVersion();
 
         add_action('init', [$this, 'registerAssets']);
@@ -51,8 +48,7 @@ class Main
      * Set the version of the plugin.
      * @return string The version of the plugin
      */
-    protected function setPluginVersion()
-    {
+    protected function setPluginVersion() {
         $pluginData = get_file_data($this->pluginFile, ['Version' => 'Version'], false);
         $this->pluginVersion = $pluginData['Version'] ?? '1.0.0';
     }    
@@ -60,8 +56,7 @@ class Main
     /**
      * Register assets.
      */
-    public function registerAssets()
-    {
+    public function registerAssets() {
         // Register scripts and styles
         wp_register_script(
             'green-office-chart',
@@ -121,24 +116,32 @@ class Main
         wp_localize_script('green-office-chart-custom', 'chartPeople', $settings['people-count']);
         wp_localize_script('green-office-chart-custom', 'chartRates', $settings['co2-emission-rates']);
         wp_localize_script('green-office-chart-custom', 'weeksPerYear', [$settings['weeks-per-year']]);
+
+        wp_register_style(
+            'rrze-green-office-style',
+            plugins_url('assets/css/rrze-green-office.css', plugin_basename($this->pluginFile)),
+            [],
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/rrze-green-office.css') ?: $this->pluginVersion
+        );
+
+        wp_register_style(
+            'rrze-green-office-admin-style',
+            plugins_url('assets/css/rrze-green-office-admin.css', plugin_basename($this->pluginFile)),
+            [],
+            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/rrze-green-office-admin.css') ?: $this->pluginVersion
+        );
+
     }
 
     /**
      * Enqueue assets.
      */
-    public function enqueueAssets()
-    {
-        // Enqueue registered assets for block editor and frontend
-
+    public function enqueueAssets() {
+        //wp_enqueue_style('rrze-green-office-style');
     }
 
     public function adminEnqueueAssets() {
-        wp_enqueue_style('green-office-frontend-style');
-        wp_enqueue_style(
-            'rrze-green-office-admin-style',
-            plugins_url('assets/css/admin.css', plugin_basename($this->pluginFile)),
-            [],
-            filemtime(plugin_dir_path($this->pluginFile) . 'assets/css/admin.css') ?: $this->pluginVersion
-        );
+        wp_enqueue_style('rrze-green-office-style');
+        wp_enqueue_style('rrze-green-office-admin-style');
     }
 }

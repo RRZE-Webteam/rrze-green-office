@@ -15,6 +15,7 @@ class Shortcode
     public static function renderShortcode()
     {
         // Enqueue assets
+        wp_enqueue_style('rrze-green-office-style');
         wp_enqueue_script('green-office-chart');
         wp_enqueue_script('green-office-chart-custom');
 

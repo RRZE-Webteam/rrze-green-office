@@ -33,7 +33,7 @@ export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
 			{ __(
-				'Placeholder for interactive CO2 Emissions Calculator',
+				'Interactive CO2 Emissions Calculator',
 				'block-template-create-block'
 			) }
 		</p>

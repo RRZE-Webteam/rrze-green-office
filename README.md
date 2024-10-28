@@ -10,7 +10,7 @@ Plugin for the FAU Green Office to calculate CO2 output
 
 ## Version
 
-Version: 1.0.2
+Version: 1.1.0
 
 ## Download
 
@@ -37,4 +37,7 @@ GNU General Public License (GPL) Version 3
 
 You can use the shortcode `[co2_emissions_calculator]` to add an CO2 Emissions Calculator anywhere in your content.
 
+### Block
+
+You can use the Block `CO2 Emissions Calculator` to add an CO2 Emissions Calculator anywhere in your content.
 
