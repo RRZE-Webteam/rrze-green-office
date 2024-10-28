@@ -27,8 +27,8 @@ import metadata from './block.json';
 const globeIcon = (
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"
 		 focusable="false">
-		<path fill-rule="evenodd" d="M11.25 5h1.5v15h-1.5V5zM6 10h1.5v10H6V10zm12 4h-1.5v6H18v-6z"
-			  clip-rule="evenodd"></path>
+		<path fillRule="evenodd" d="M11.25 5h1.5v15h-1.5V5zM6 10h1.5v10H6V10zm12 4h-1.5v6H18v-6z"
+			  clipRule="evenodd"></path>
 	</svg>
 );
 

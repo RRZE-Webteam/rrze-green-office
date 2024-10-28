@@ -280,9 +280,9 @@ const globeIcon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__
   "aria-hidden": "true",
   focusable: "false",
   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     d: "M11.25 5h1.5v15h-1.5V5zM6 10h1.5v10H6V10zm12 4h-1.5v6H18v-6z",
-    "clip-rule": "evenodd"
+    clipRule: "evenodd"
   })
 });
 
