@@ -97,7 +97,6 @@ class Main {
             'more_co2_per_year' => __('would cause you to emit kg CO₂ more per year.', 'rrze-green-office'),
             'valid_distance' => __('Please enter valid values ​​for distance and frequency.', 'rrze-green-office'),
             'most_used_transport' => __('is the most used mode of transport.', 'rrze-green-office'),
-            'assumptions' => __('Assumptions:', 'rrze-green-office'),
             'usage_percent' => __('Usage (%)', 'rrze-green-office'),
             'modal_split_selected_distance' => __('Modal Split of the selected distance', 'rrze-green-office'),
             'share_percentage' => __('Share [%]', 'rrze-green-office'),
@@ -105,8 +104,6 @@ class Main {
             'current_co2_emission' => __('Your current CO₂ emission', 'rrze-green-office'),
             'your_co2_emission' => __('Your CO₂ emission', 'rrze-green-office'),
             'co2_equivalents' => __('CO₂ equivalents [kg/year]', 'rrze-green-office'),
-            /* translators: Number of weeks*/
-            'average_weeks' => sprintf(__('Due to lecture-free time or holidays and public holidays, we calculate an average of %s weeks per year in which you travel to FAU.', 'rrze-green-office'), (string)number_format_i18n($options['weeks-per-year'], 1)),
         );
 
         wp_localize_script('green-office-chart-custom', 'chartTranslations', $chart_translations);

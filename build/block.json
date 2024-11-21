@@ -6,7 +6,7 @@
   "title": "CO2 Emissions Calculator",
   "category": "widgets",
   "icon": "globe",
-  "description": "Interactive CO2 Emissions Calculator",
+  "description": "Interactive CO2 Calculator",
   "example": {},
   "supports": {
     "html": false

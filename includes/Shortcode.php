@@ -20,7 +20,7 @@ class Shortcode
         wp_enqueue_script('green-office-chart-custom');
 
         // Generate the output
-        $output = '<div class="rrze-green-office co2-emissions-calculator"><p>' . __('Determine your current CO₂ emissions, discover savings through alternative means of transport, and see how you compare to others.', 'rrze-green-office') . '</p>
+        $output = '<div class="rrze-green-office co2-emissions-calculator">
             <div class="input-container">
                 <div class="input-distance">
                     <label for="distance">' . __('My route to FAU in km:', 'rrze-green-office') . '</label>
