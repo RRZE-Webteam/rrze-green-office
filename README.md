@@ -10,7 +10,7 @@ Plugin for the FAU Green Office to calculate CO2 output
 
 ## Version
 
-Version: 1.1.0
+Version: 1.1.1
 
 ## Download
 

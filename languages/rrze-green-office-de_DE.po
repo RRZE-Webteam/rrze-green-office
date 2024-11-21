@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: RRZE Green Office\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-11 06:56+0000\n"
-"PO-Revision-Date: 2024-10-28 12:05+0000\n"
+"PO-Revision-Date: 2024-11-21 11:50+0000\n"
 "Last-Translator: Barbara Bothe\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Loco-Version: 2.6.14; wp-6.7\n"
 "X-Domain: rrze-green-office"
 
 #: includes/Config.php:158
@@ -82,8 +82,7 @@ msgstr "Kurzanalyse:"
 msgid "Calculate"
 msgstr "Berechnen"
 
-#: includes/Shortcode.php:42 includes/Main.php:82 includes/Main.php:83
-#: includes/Config.php:151
+#: includes/Shortcode.php:42 includes/Main.php:82 includes/Main.php:83 includes/Config.php:151
 msgid "Car"
 msgstr "Auto"
 
@@ -108,26 +107,15 @@ msgid "CO₂ equivalents [kg/year]"
 msgstr "CO₂-Äquivalente [kg/Jahr]"
 
 #: includes/Shortcode.php:23
-msgid ""
-"Determine your current CO₂ emissions, discover savings through alternative "
-"means of transport, and see how you compare to others."
-msgstr ""
-"Ermitteln Sie Ihren aktuellen CO₂-Ausstoß, entdecken Sie "
-"Einsparmöglichkeiten durch alternative Verkehrsmittel und sehen Sie, wie Sie "
-"im Vergleich zu anderen abschneiden."
+msgid "Determine your current CO₂ emissions, discover savings through alternative means of transport, and see how you compare to others."
+msgstr "Ermitteln Sie Ihren aktuellen CO₂-Ausstoß, entdecken Sie Einsparmöglichkeiten durch alternative Verkehrsmittel und sehen Sie, wie Sie im Vergleich zu anderen abschneiden."
 
 #. Number of weeks
 #: includes/Main.php:109
 #, php-format
-#| msgid ""
-#| "Due to lecture-free time or holidays and public holidays, we calculate an "
-#| "average of %f weeks per year in which you travel to FAU."
-msgid ""
-"Due to lecture-free time or holidays and public holidays, we calculate an "
-"average of %s weeks per year in which you travel to FAU."
-msgstr ""
-"Aufgrund vorlesungsfreier Zeit bzw. Urlaubs- und Feiertage rechnen wir im "
-"Durchschnitt mit %s Wochen pro Jahr, in denen zur FAU gefahren wird."
+#| msgid "Due to lecture-free time or holidays and public holidays, we calculate an average of %f weeks per year in which you travel to FAU."
+msgid "Due to lecture-free time or holidays and public holidays, we calculate an average of %s weeks per year in which you travel to FAU."
+msgstr "Aufgrund vorlesungsfreier Zeit bzw. Urlaubs- und Feiertage rechnen wir im Durchschnitt mit %s Wochen pro Jahr, in denen zur FAU gefahren wird."
 
 #: includes/Shortcode.php:27
 msgid "e.g., 4.5"
@@ -252,22 +240,14 @@ msgstr "Studierende"
 #. 1: Server PHP version number, 2: Required PHP version number.
 #: rrze-green-office.php:78
 #, php-format
-msgid ""
-"The server is running PHP version %1$s. The Plugin requires at least PHP "
-"version %2$s."
-msgstr ""
-"Auf dem Server läuft PHP Version %1$s. Das Plugin erfordert mindestens PHP "
-"Version %2$s."
+msgid "The server is running PHP version %1$s. The Plugin requires at least PHP version %2$s."
+msgstr "Auf dem Server läuft PHP Version %1$s. Das Plugin erfordert mindestens PHP Version %2$s."
 
 #. 1: Server WordPress version number, 2: Required WordPress version number.
 #: rrze-green-office.php:85
 #, php-format
-msgid ""
-"The server is running WordPress version %1$s. The Plugin requires at least "
-"WordPress version %2$s."
-msgstr ""
-"Auf dem Server läuft WordPress Version %1$s. Das Plugin erfordert mindestens "
-"WordPress Version %2$s."
+msgid "The server is running WordPress version %1$s. The Plugin requires at least WordPress version %2$s."
+msgstr "Auf dem Server läuft WordPress Version %1$s. Das Plugin erfordert mindestens WordPress Version %2$s."
 
 #: includes/Config.php:153
 msgid "Total"

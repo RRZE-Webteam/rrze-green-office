@@ -3,8 +3,6 @@ const data = chartData;
 //const students = 3121;
 //const employees = 1793;
 
-//console.log(parseFloat(weeksPerYear[0]));
-
 const distancesInKm = [2.5, 5, 10, 25, 50, Infinity];
 
 const colors = {
@@ -139,8 +137,8 @@ function updateChart() {
     modalSplitChart.data.datasets = [{
         label: chartTranslations.usage_percent,
         data: usageData.map(d => d.percentage),
-        backgroundColor: ['#041E42', '#0044A9', '#04316A', '#CED9E7'],
-        borderColor: ['#041E42', '#0044A9', '#04316A', '#CED9E7'],
+        backgroundColor: ['#04316A', '#04316A', '#04316A', '#04316A'],
+        borderColor: ['#04316A', '#04316A', '#04316A', '#04316A'],
         borderWidth: 1
     }];
     modalSplitChart.data.labels = usageData.map(d => d.label);
@@ -185,8 +183,6 @@ function updateChart() {
 
     resultHTML += `
         </ul>
-       <h4>${chartTranslations.assumptions}</h4>
-        <p>${chartTranslations.average_weeks}</p>
     `;
 
     document.getElementById('result').innerHTML = resultHTML;

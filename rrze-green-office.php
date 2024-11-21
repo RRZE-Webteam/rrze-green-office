@@ -6,7 +6,7 @@ namespace RRZE\GreenOffice;
  * Plugin Name:     RRZE Green Office
  * Plugin URI:      https://github.com/RRZE-Webteam/rrze-green-office/
  * Description:     Adds an interactive CO2 emission calculator to your website.
- * Version:         1.1.0
+ * Version:         1.1.1
  * Requires at least: 6.6
  * Requires PHP:      8.2
  * Author:          RRZE Webteam
